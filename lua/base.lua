@@ -11,11 +11,10 @@ vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'number'
 vim.opt.syntax = 'on'
 vim.opt.clipboard:append('unnamedplus')
+vim.opt.showmode = false
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 --vim.cmd('colorscheme tokyonight-night')
 vim.cmd('colorscheme kanagawa')
 vim.opt.laststatus = 2
 vim.loader.enable()
-
-vim.g.ale_sign_error = '!!'
-vim.g.ale_sign_warning = '--'
-vim.g.ale_linters = { python = {'flake8'}, cpp = {'clang'} }
