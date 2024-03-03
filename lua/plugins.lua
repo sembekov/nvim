@@ -1,18 +1,10 @@
 require('packer').startup(function(use)
-	use 'prabirshrestha/vim-lsp'
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 	use 'ggandor/leap.nvim'
-	use 'cocopon/iceberg.vim'
 	use 'NLKNguyen/papercolor-theme'
-	--use 'dense-analysis/ale'
-	use {'junegunn/fzf', run = function() vim.fn['fzf#install']() end}
-	use 'dylanaraps/wal.vim'
 	use 'folke/tokyonight.nvim'
 	use 'rebelot/kanagawa.nvim'
 	use { "catppuccin/nvim", as = "catppuccin" }
-	use 'hrsh7th/vim-vsnip'
-	use 'hrsh7th/vim-vsnip-integ'
-	use 'neovim/nvim-lspconfig'
 	use 'christoomey/vim-tmux-navigator'
 	use 'norcalli/nvim-colorizer.lua'
 	use 'nvim-tree/nvim-tree.lua'
@@ -21,22 +13,21 @@ require('packer').startup(function(use)
 	use 'nvim-lualine/lualine.nvim'
 	use 'lewis6991/gitsigns.nvim'
 	use 'romgrk/barbar.nvim'
-	use 'mfussenegger/nvim-dap'
-	use 'rcarriga/nvim-dap-ui'
-	use 'ThePrimeagen/vim-be-good'
-	-- nvim-cmp
+	use 'neovim/nvim-lspconfig'
 	use 'hrsh7th/cmp-nvim-lsp'
 	use 'hrsh7th/cmp-buffer'
 	use 'hrsh7th/cmp-path'
 	use 'hrsh7th/cmp-cmdline'
 	use 'hrsh7th/nvim-cmp'
-	-- For vsnip users.
 	use 'hrsh7th/cmp-vsnip'
 	use 'windwp/nvim-autopairs'
+	use 'mhinz/vim-startify'
+	use 'ThePrimeagen/vim-be-good'
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.2',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
+	use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 	use({
 		"kylechui/nvim-surround",
 		tag = "*",
@@ -49,4 +40,19 @@ require('packer').startup(function(use)
 		"iamcco/markdown-preview.nvim",
 		run = function() vim.fn["mkdp#util#install"]() end,
 	})
+	use {
+		'VonHeikemen/lsp-zero.nvim',
+		branch = 'v3.x',
+		requires = {
+			{'williamboman/mason.nvim'},
+			{'williamboman/mason-lspconfig.nvim'},
+			-- LSP Support
+			{'neovim/nvim-lspconfig'},
+			-- Autocompletion
+			{'hrsh7th/nvim-cmp'},
+			{'hrsh7th/cmp-nvim-lsp'},
+			{'L3MON4D3/LuaSnip'},
+			{ "rafamadriz/friendly-snippets" },
+		}
+	}
 end)
