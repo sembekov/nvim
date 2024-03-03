@@ -27,6 +27,7 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+vim.keymap.set('n', '<leader>of', builtin.oldfiles, {})
 
 
 local opts = { noremap = true, silent = true }
@@ -51,3 +52,10 @@ map('n', '<Space>bb', '<Cmd>BufferOrderByBufferNumber<CR>', opts)
 map('n', '<Space>bd', '<Cmd>BufferOrderByDirectory<CR>', opts)
 map('n', '<Space>bl', '<Cmd>BufferOrderByLanguage<CR>', opts)
 map('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
+
+
+local lsp_zero = require('lsp-zero')
+
+lsp_zero.on_attach(function(client, bufnr)
+  lsp_zero.default_keymaps({buffer = bufnr})
+end)
