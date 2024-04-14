@@ -29,6 +29,7 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 vim.keymap.set('n', '<leader>of', builtin.oldfiles, {})
 
+vim.keymap.set("n", "<leader>fz", "<cmd>lua require('fzf-lua').files()<CR>", { silent = true })
 
 local opts = { noremap = true, silent = true }
 map('n', '<A-,>', '<Cmd>BufferPrevious<CR>', opts)
