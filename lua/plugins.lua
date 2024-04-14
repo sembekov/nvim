@@ -1,7 +1,6 @@
 require('packer').startup(function(use)
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 	use 'ggandor/leap.nvim'
-	use 'NLKNguyen/papercolor-theme'
 	use 'folke/tokyonight.nvim'
 	use 'rebelot/kanagawa.nvim'
 	use { "catppuccin/nvim", as = "catppuccin" }
@@ -23,6 +22,7 @@ require('packer').startup(function(use)
 	use 'windwp/nvim-autopairs'
 	use 'mhinz/vim-startify'
 	use 'ThePrimeagen/vim-be-good'
+	use 'ibhagwan/fzf-lua'
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.2',
 		requires = { {'nvim-lua/plenary.nvim'} }
