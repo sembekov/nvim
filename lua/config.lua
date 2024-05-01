@@ -4,9 +4,6 @@ require('nvim-autopairs').setup()
 require ('colorizer').setup()
 require('lualine').setup()
 require('telescope').load_extension('fzf')
---require"startup".setup {
---	theme = "evil"
---}
 require'nvim-treesitter.configs'.setup {
   ensure_installed = { "c", "cpp", "python", "rust", "java", "bash", "lua", "javascript", "html", "css", "typescript", "markdown", "markdown_inline" },
   sync_install = false,
@@ -35,21 +32,6 @@ require("nvim-tree").setup({
     dotfiles = false,
   },
 })
-
-
-
---local highlight = {
---  "Whitespace"
---}
---require("ibl").setup {
---    indent = { highlight = highlight, char = "▏" },
---    whitespace = {
---        highlight = highlight,
---        remove_blankline_trail = false,
---    },
---    scope = { enabled = false },
---}
-
 
 
 local lsp_zero = require('lsp-zero')

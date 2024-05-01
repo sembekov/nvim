@@ -1,14 +1,19 @@
 local map = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true }
 --vim.api.nvim_set_keymap('i', '}', '}', { noremap = true })
 vim.g.mapleader = ','
 
-map('n', '<leader>ne', ':NvimTreeFindFileToggle<cr>zz', { noremap = true, silent = true })
-map('n', ',<space>', ':nohlsearch<CR>', { noremap = true, silent = true })
-map('n', '<leader>v', ':vsplit<enter>', { noremap = true, silent = true })
-map('n', '<leader>h', ':split<enter>', { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>fz", "<cmd>lua require('fzf-lua').files()<CR>", { silent = true })
+map('n', '<leader>ne', '<cmd>NvimTreeFindFileToggle<CR>zz', opts)
+map('n', ',<space>', '<cmd>nohlsearch<CR>', opts)
+map('n', '<leader>v', '<cmd>:vsplit<CR>', opts)
+map('n', '<leader>h', '<cmd>:split<CR>', opts)
 map('n', '<C-u>', '<C-u>zz', { noremap = true })
 map('n', '<C-d>', '<C-d>zz', { noremap = true })
-map('n', '<leader>md', ':MarkdownPreviewToggle<enter>', { noremap = true, silent = true })
+map('n', '<leader>md', '<cmd>MarkdownPreviewToggle<CR>', opts)
+map('n', '<bs>', '<C-6>', opts)
+map('n', '<A-,>', '<cmd>bprevious<CR>', opts)
+map('n', '<A-.>', '<cmd>bnext<CR>', opts)
 
 
 local tmux_vi = {}
@@ -29,34 +34,8 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 vim.keymap.set('n', '<leader>of', builtin.oldfiles, {})
 
-vim.keymap.set("n", "<leader>fz", "<cmd>lua require('fzf-lua').files()<CR>", { silent = true })
-
-local opts = { noremap = true, silent = true }
-map('n', '<A-,>', '<Cmd>BufferPrevious<CR>', opts)
-map('n', '<A-.>', '<Cmd>BufferNext<CR>', opts)
-map('n', '<A-<>', '<Cmd>BufferMovePrevious<CR>', opts)
-map('n', '<A->>', '<Cmd>BufferMoveNext<CR>', opts)
-map('n', '<A-1>', '<Cmd>BufferGoto 1<CR>', opts)
-map('n', '<A-2>', '<Cmd>BufferGoto 2<CR>', opts)
-map('n', '<A-3>', '<Cmd>BufferGoto 3<CR>', opts)
-map('n', '<A-4>', '<Cmd>BufferGoto 4<CR>', opts)
-map('n', '<A-5>', '<Cmd>BufferGoto 5<CR>', opts)
-map('n', '<A-6>', '<Cmd>BufferGoto 6<CR>', opts)
-map('n', '<A-7>', '<Cmd>BufferGoto 7<CR>', opts)
-map('n', '<A-8>', '<Cmd>BufferGoto 8<CR>', opts)
-map('n', '<A-9>', '<Cmd>BufferGoto 9<CR>', opts)
-map('n', '<A-0>', '<Cmd>BufferLast<CR>', opts)
-map('n', '<A-p>', '<Cmd>BufferPin<CR>', opts)
-map('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
-map('n', '<C-p>', '<Cmd>BufferPick<CR>', opts)
-map('n', '<Space>bb', '<Cmd>BufferOrderByBufferNumber<CR>', opts)
-map('n', '<Space>bd', '<Cmd>BufferOrderByDirectory<CR>', opts)
-map('n', '<Space>bl', '<Cmd>BufferOrderByLanguage<CR>', opts)
-map('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
-
 
 local lsp_zero = require('lsp-zero')
-
 lsp_zero.on_attach(function(client, bufnr)
   lsp_zero.default_keymaps({buffer = bufnr})
 end)

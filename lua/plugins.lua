@@ -11,7 +11,6 @@ require('packer').startup(function(use)
 	use 'nvim-tree/nvim-web-devicons' 
 	use 'nvim-lualine/lualine.nvim'
 	use 'lewis6991/gitsigns.nvim'
-	use 'romgrk/barbar.nvim'
 	use 'neovim/nvim-lspconfig'
 	use 'hrsh7th/cmp-nvim-lsp'
 	use 'hrsh7th/cmp-buffer'
@@ -52,7 +51,7 @@ require('packer').startup(function(use)
 			{'hrsh7th/nvim-cmp'},
 			{'hrsh7th/cmp-nvim-lsp'},
 			{'L3MON4D3/LuaSnip'},
-			{ "rafamadriz/friendly-snippets" },
+			--{ "rafamadriz/friendly-snippets" },
 		}
 	}
 end)
