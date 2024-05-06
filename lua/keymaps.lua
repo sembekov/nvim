@@ -1,6 +1,5 @@
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
---vim.api.nvim_set_keymap('i', '}', '}', { noremap = true })
 vim.g.mapleader = ','
 
 vim.keymap.set("n", "<leader>fz", "<cmd>lua require('fzf-lua').files()<CR>", { silent = true })
@@ -14,6 +13,7 @@ map('n', '<leader>md', '<cmd>MarkdownPreviewToggle<CR>', opts)
 map('n', '<bs>', '<C-6>', opts)
 map('n', '<A-,>', '<cmd>bprevious<CR>', opts)
 map('n', '<A-.>', '<cmd>bnext<CR>', opts)
+map('n', '<F2>', '@@', opts)
 
 
 local tmux_vi = {}

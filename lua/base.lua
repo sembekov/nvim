@@ -16,6 +16,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.smarttab = true
 vim.o.termguicolors = true
+vim.opt.signcolumn = 'no'
 vim.cmd('colorscheme tokyonight-night')
 --vim.cmd('colorscheme kanagawa')
 vim.opt.laststatus = 2
