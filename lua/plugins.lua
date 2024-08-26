@@ -22,6 +22,7 @@ require('packer').startup(function(use)
 	use 'mhinz/vim-startify'
 	use 'ThePrimeagen/vim-be-good'
 	use 'ibhagwan/fzf-lua'
+	use 'EdenEast/nightfox.nvim'
 	use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.2',
 		requires = { {'nvim-lua/plenary.nvim'} }

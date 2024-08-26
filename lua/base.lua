@@ -17,8 +17,12 @@ vim.opt.smartcase = true
 vim.opt.smarttab = true
 vim.o.termguicolors = true
 vim.opt.signcolumn = 'no'
+vim.o.shortmess = vim.o.shortmess .. "c"
 vim.cmd('colorscheme tokyonight-night')
 --vim.cmd('colorscheme kanagawa')
+--vim.cmd('colorscheme kanagawa-dragon')
+vim.cmd("colorscheme carbonfox")
 vim.opt.laststatus = 2
 vim.loader.enable()
 vim.opt.guicursor = "n-v-i-c:block-Cursor"
+vim.opt.jumpoptions:append('stack')

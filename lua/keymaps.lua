@@ -15,7 +15,6 @@ map('n', '<A-,>', '<cmd>bprevious<CR>', opts)
 map('n', '<A-.>', '<cmd>bnext<CR>', opts)
 map('n', '<F2>', '@@', opts)
 
-
 local tmux_vi = {}
 tmux_vi.general = {
   n = {
