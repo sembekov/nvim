@@ -1,15 +1,14 @@
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
-vim.g.mapleader = ','
 
-vim.keymap.set("n", "<leader>fz", "<cmd>lua require('fzf-lua').files()<CR>", { silent = true })
-map('n', '<leader>ne', '<cmd>NvimTreeFindFileToggle<CR>zz', opts)
+vim.keymap.set("n", ",fz", "<cmd>lua require('fzf-lua').files()<CR>", { silent = true })
+map('n', ',ne', '<cmd>NvimTreeFindFileToggle<CR>zz', opts)
 map('n', ',<space>', '<cmd>nohlsearch<CR>', opts)
-map('n', '<leader>v', '<cmd>:vsplit<CR>', opts)
-map('n', '<leader>h', '<cmd>:split<CR>', opts)
+map('n', ',v', '<cmd>:vsplit<CR>', opts)
+map('n', ',h', '<cmd>:split<CR>', opts)
 map('n', '<C-u>', '<C-u>zz', { noremap = true })
 map('n', '<C-d>', '<C-d>zz', { noremap = true })
-map('n', '<leader>md', '<cmd>MarkdownPreviewToggle<CR>', opts)
+map('n', ',md', '<cmd>MarkdownPreviewToggle<CR>', opts)
 map('n', '<bs>', '<C-6>', opts)
 map('n', '<A-,>', '<cmd>bprevious<CR>', opts)
 map('n', '<A-.>', '<cmd>bnext<CR>', opts)
@@ -27,11 +26,11 @@ tmux_vi.general = {
 
 
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
-vim.keymap.set('n', '<leader>of', builtin.oldfiles, {})
+vim.keymap.set('n', ',ff', builtin.find_files, {})
+vim.keymap.set('n', ',fg', builtin.live_grep, {})
+vim.keymap.set('n', ',fb', builtin.buffers, {})
+vim.keymap.set('n', ',fh', builtin.help_tags, {})
+vim.keymap.set('n', ',of', builtin.oldfiles, {})
 
 
 local lsp_zero = require('lsp-zero')

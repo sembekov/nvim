@@ -18,7 +18,7 @@ vim.opt.smarttab = true
 vim.o.termguicolors = true
 vim.opt.signcolumn = 'no'
 vim.o.shortmess = vim.o.shortmess .. "c"
-vim.cmd('colorscheme tokyonight-night')
+--vim.cmd('colorscheme tokyonight-night')
 --vim.cmd('colorscheme kanagawa')
 --vim.cmd('colorscheme kanagawa-dragon')
 vim.cmd("colorscheme carbonfox")
