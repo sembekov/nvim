@@ -18,6 +18,7 @@ vim.opt.rtp:prepend(lazypath)
 -- Set up mapleader before loading Lazy.nvim
 vim.g.mapleader = ","
 vim.g.maplocalleader = "\\"
+vim.o.termguicolors = true
 
 -- Load plugins using Lazy.nvim
 require("lazy").setup({

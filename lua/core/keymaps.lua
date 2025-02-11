@@ -33,7 +33,7 @@ vim.keymap.set('n', ',fh', builtin.help_tags, {})
 vim.keymap.set('n', ',of', builtin.oldfiles, {})
 
 
-local lsp_zero = require('lsp-zero')
-lsp_zero.on_attach(function(client, bufnr)
-  lsp_zero.default_keymaps({buffer = bufnr})
-end)
+--local lsp_zero = require('lsp-zero')
+--lsp_zero.on_attach(function(client, bufnr)
+--  lsp_zero.default_keymaps({buffer = bufnr})
+--end)

@@ -6,6 +6,8 @@ vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.mousehide = true
 vim.opt.wrap = false
+vim.opt.swapfile = false
+vim.o.autoread = true
 vim.opt.background = 'dark'
 vim.opt.cursorline = true
 vim.opt.cursorlineopt = 'number'
@@ -19,10 +21,11 @@ vim.o.termguicolors = true
 vim.opt.signcolumn = 'no'
 vim.o.shortmess = vim.o.shortmess .. "c"
 --vim.cmd('colorscheme tokyonight-night')
---vim.cmd('colorscheme kanagawa')
+vim.cmd('colorscheme kanagawa')
 --vim.cmd('colorscheme kanagawa-dragon')
-vim.cmd("colorscheme carbonfox")
+--vim.cmd("colorscheme carbonfox")
 vim.opt.laststatus = 2
 vim.loader.enable()
 vim.opt.guicursor = "n-v-i-c:block-Cursor"
 vim.opt.jumpoptions:append('stack')
+require 'colorizer'.setup()
