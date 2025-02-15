@@ -30,8 +30,10 @@ return {
     event = 'InsertEnter',
     dependencies = {
       {'L3MON4D3/LuaSnip'},
+	  {'hrsh7th/cmp-path'},
+	  {'hrsh7th/cmp-buffer'},
     },
-    config = function()
+    init = function()
       local lsp_zero = require('lsp-zero')
       lsp_zero.extend_cmp()
 
@@ -45,6 +47,8 @@ return {
         sources = {
           {name = 'nvim_lsp'},
           {name = 'luasnip'},
+		  {name = 'path'},
+		  {name = 'buffer'},
           },
         mapping = cmp.mapping.preset.insert({
 		  ['<enter>'] = cmp.mapping.confirm({ select = true }),
