@@ -1,6 +1,9 @@
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
+vim.api.nvim_set_keymap('n', 'j', 'gj', { noremap = true })
+vim.api.nvim_set_keymap('n', 'k', 'gk', { noremap = true })
+
 vim.keymap.set("n", ",fz", "<cmd>lua require('fzf-lua').files()<CR>", { silent = true })
 map('n', ',ne', '<cmd>NvimTreeFindFileToggle<CR>zz', opts)
 map('n', ',<space>', '<cmd>nohlsearch<CR>', opts)

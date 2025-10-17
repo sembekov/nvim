@@ -2,10 +2,12 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.mousehide = true
-vim.opt.wrap = false
+vim.opt.wrap = true
+vim.opt.linebreak = true
 vim.opt.swapfile = false
 vim.o.autoread = true
 vim.opt.background = 'dark'
@@ -21,9 +23,9 @@ vim.o.termguicolors = true
 vim.opt.signcolumn = 'no'
 vim.o.shortmess = vim.o.shortmess .. "c"
 --vim.cmd('colorscheme tokyonight-night')
-vim.cmd('colorscheme kanagawa')
+--vim.cmd('colorscheme kanagawa')
 --vim.cmd('colorscheme kanagawa-dragon')
---vim.cmd("colorscheme carbonfox")
+vim.cmd("colorscheme carbonfox")
 vim.opt.laststatus = 2
 vim.loader.enable()
 vim.opt.guicursor = "n-v-i-c:block-Cursor"
