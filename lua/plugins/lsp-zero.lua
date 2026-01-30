@@ -84,7 +84,7 @@ return {
       end)
 
       require('mason-lspconfig').setup({
-        ensure_installed = {'ts_ls', 'html', 'clangd', 'pyright'},  
+        ensure_installed = {},  
         handlers = {
           function(server_name)
             require('lspconfig')[server_name].setup({})
