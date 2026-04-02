@@ -15,7 +15,10 @@ return {
             require("leap").add_default_mappings(true)
         end,
     },
-    { "christoomey/vim-tmux-navigator", lazy = false },
+    {
+        "christoomey/vim-tmux-navigator",
+        lazy = false,
+    },
     {
         "knubie/vim-kitty-navigator"
     },
@@ -47,14 +50,7 @@ return {
             })
         end,
     },
-    --{
-    --	'akinsho/bufferline.nvim', 
-    --	version = "*", 
-    --	dependencies = 'nvim-tree/nvim-web-devicons', 
-    --	config = function() 
-    --		require("bufferline").setup()
-    --	end,
-    --},
+    --{  --	'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons', config = function() require("bufferline").setup() end, },
     { "norcalli/nvim-colorizer.lua" },
     {
         "lewis6991/gitsigns.nvim",
@@ -102,14 +98,8 @@ return {
     },
     {
         "kylechui/nvim-surround",
-        version = "*",
-        config = function()
-            require("nvim-surround").setup({
-                keymaps = {
-                    visual = "<leader>s",
-                }
-            })
-        end,
+        version = "^4.0.0", -- Use for stability; omit to use `main` branch for the latest features
+        event = "VeryLazy",
     },
     {
         "iamcco/markdown-preview.nvim",
@@ -124,11 +114,13 @@ return {
         end,
         dependencies = {"nvim-treesitter/nvim-treesitter"},
     },
-    {
-        "chrisgrieser/nvim-scissors",
-        dependencies = "nvim-telescope/telescope.nvim", 
-        opts = {
-            snippetDir = "../snippets",
-        } 
-    },
+    --{
+    --    "chrisgrieser/nvim-scissors",
+    --    dependencies = { "nvim-telescope/telescope.nvim" },
+    --    config = function()
+    --        require("scissors").setup({
+    --            snippetDir = "./snippets",  -- relative path from your Neovim config folder
+    --        })
+    --    end,
+    --}
 }

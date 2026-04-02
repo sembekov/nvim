@@ -22,6 +22,7 @@ vim.opt.smarttab = true
 vim.o.termguicolors = true
 vim.opt.signcolumn = 'no'
 vim.o.shortmess = vim.o.shortmess .. "c"
+vim.g.tmux_navigator_no_mappings = 1
 --vim.cmd('colorscheme tokyonight-night')
 --vim.cmd('colorscheme kanagawa')
 --vim.cmd('colorscheme kanagawa-dragon')

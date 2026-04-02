@@ -17,15 +17,15 @@ map('n', '<A-,>', '<cmd>bprevious<CR>', opts)
 map('n', '<A-.>', '<cmd>bnext<CR>', opts)
 map('n', '<F2>', '@@', opts)
 
-local tmux_vi = {}
-tmux_vi.general = {
-  n = {
-    ["<C-h>"] = { "<cmd> TmuxNavigateLeft<CR>", "window left" },
-    ["<C-l>"] = { "<cmd> TmuxNavigateRight<CR>", "window right" },
-    ["<C-j>"] = { "<cmd> TmuxNavigateDown<CR>", "window down" },
-    ["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", "window up" },
-  }
-}
+-- local tmux_vi = {}
+-- tmux_vi.general = {
+--   n = {
+--     ["<C-h>"] = { "<cmd> TmuxNavigateLeft<CR>", "window left" },
+--     ["<C-l>"] = { "<cmd> TmuxNavigateRight<CR>", "window right" },
+--     ["<C-j>"] = { "<cmd> TmuxNavigateDown<CR>", "window down" },
+--     ["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", "window up" },
+--   }
+-- }
 
 
 local builtin = require('telescope.builtin')
