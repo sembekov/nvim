@@ -10,10 +10,7 @@ return {
     },
     {
         url = "https://codeberg.org/andyg/leap.nvim",
-        event = "VeryLazy",
-        config = function()
-            require("leap").add_default_mappings(true)
-        end,
+        lazy = false,
     },
     {
         "christoomey/vim-tmux-navigator",
@@ -115,12 +112,12 @@ return {
         dependencies = {"nvim-treesitter/nvim-treesitter"},
     },
     --{
-    --    "chrisgrieser/nvim-scissors",
-    --    dependencies = { "nvim-telescope/telescope.nvim" },
-    --    config = function()
-    --        require("scissors").setup({
-    --            snippetDir = "./snippets",  -- relative path from your Neovim config folder
-    --        })
-    --    end,
-    --}
-}
+        --    "chrisgrieser/nvim-scissors",
+        --    dependencies = { "nvim-telescope/telescope.nvim" },
+        --    config = function()
+            --        require("scissors").setup({
+                --            snippetDir = "./snippets",  -- relative path from your Neovim config folder
+                --        })
+                --    end,
+                --}
+            }

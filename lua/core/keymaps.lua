@@ -35,6 +35,15 @@ vim.keymap.set('n', ',fb', builtin.buffers, {})
 vim.keymap.set('n', ',fh', builtin.help_tags, {})
 vim.keymap.set('n', ',of', builtin.oldfiles, {})
 
+local leap = require('leap')
+
+vim.keymap.set({'n', 'x', 'o'}, 's', function()
+  leap.leap { target_windows = { vim.api.nvim_get_current_win() } }
+end)
+
+vim.keymap.set({'n', 'x', 'o'}, 'S', function()
+  leap.leap { backward = true }
+end)
 
 --local lsp_zero = require('lsp-zero')
 --lsp_zero.on_attach(function(client, bufnr)
