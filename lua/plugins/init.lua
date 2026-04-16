@@ -16,9 +16,6 @@ return {
         "christoomey/vim-tmux-navigator",
         lazy = false,
     },
-    {
-        "knubie/vim-kitty-navigator"
-    },
     { 
         "nvim-tree/nvim-tree.lua", 
         cmd = "NvimTreeToggle",
